@@ -1,12 +1,12 @@
 # Taller01_Metodos
 
-#arregloProductos()
-#Precios(int celdadeprecio)
-#compra(int[] arregloProductos)
-#verCarrito(carrito(compra))
-#carrito(compra)
-#totalCompra(carrito(compra))
-#verCarritodetallado(carrito(compra))
+*arregloProductos()
+*Precios(int celdadeprecio)
+*compra(int[] arregloProductos)
+*verCarrito(carrito(compra))
+*carrito(compra)
+*totalCompra(carrito(compra))
+*verCarritodetallado(carrito(compra))
 
 Analisis:
 - Hacer un arreglo random de rango 20 para la cantidad de productos
