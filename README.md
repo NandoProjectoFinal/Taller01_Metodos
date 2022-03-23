@@ -1,7 +1,7 @@
 # Taller01_Metodos
 
 *arregloProductos()
-*Precios(int celdadeprecio)
+*Precios(int[] arr)
 *compra(int[] arregloProductos)
 *verCarrito(carrito(compra))
 *carrito(compra)
