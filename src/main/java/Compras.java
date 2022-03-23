@@ -2,40 +2,67 @@ import java.util.Random;
 
 public class Compras {
     public static void main(String[] args) {
+        int a = randomRango20();
+        carritoGeneral(arregloProductos(a));
+        System.out.println("total de la compra es= " + totalCompra(valores(arregloProductos(a))));
+        verCarritoDetallado(arregloProductos(a), compra(arregloProductos(a)), valores(arregloProductos(a)));
     }
 
-
-
-    public static void carritoGeneral(int[] arr){
-        System.out.println("El carrito tiene " + arr.length + " Productos");
-    }
-
-    public static int[] compra(int[] arregloProductos) {
-        int [] a = new int[arregloProductos.length];
-        for (int i = 0; i < arregloProductos.length; i++) {
-            a[i]=randomRango15();
+    public static int totalCompra(int[] ints) {
+        int a =0;
+        for (int i = 0; i < ints.length; i++) {
+            a= a+ints[i];
         }
         return a;
     }
 
-    public static int randomRango15(){
-        Random rnum = new Random();
-        return rnum.nextInt(14)+1;
+
+    public static void verCarritoDetallado(int[] productos, int[] compras, int[] valores) {
+        System.out.println("El carro tiene: ");
+        for (int i = 0; i < productos.length; i++) {
+            System.out.println(compras[i] + " productos tipo " + (i+1) + ", costo = " + valores[i]);
+        }
+        System.out.println("TOTAL= " + totalCompra(valores));
     }
 
-    public static int randomRango20(){
-        Random rnum = new Random();
-        return rnum.nextInt(19)+1;
+    public static void carritoGeneral(int[] arr) {
+        System.out.println("El carrito tiene " + arr.length + " Productos");
     }
 
-    public static int[] arregloProductos() {
-        int[] arr = new int[randomRango20()];
+    public static int[] compra(int[] arregloProductos) {
+        int[] a = new int[arregloProductos.length];
+        for (int i = 0; i < arregloProductos.length; i++) {
+            a[i] = randomRango15();
+        }
+        return a;
+    }
+
+    public static int randomRango15() {
+        Random rnum = new Random();
+        return rnum.nextInt(14) + 1;
+    }
+
+    public static int randomRango20() {
+        Random rnum = new Random();
+        return rnum.nextInt(19) + 1;
+    }
+
+    public static int[] arregloProductos(int a) {
+        int[] arr = new int[a];
         return arr;
+    }
+
+    public static int[] valores(int[] arr) {
+        int[] valores = new int[arr.length];
+        for (int i = 0; i < valores.length; i++) {
+            valores[i] = 500 * i;
+        }
+        return valores;
     }
 }
 /*
 arregloProductos()
-Precios(int celdadeprecio)
+Precios(int[] arr)
 compra(int[] arregloProductos)
 verCarrito(carrito(compra))
 carrito(compra)
