@@ -20,7 +20,7 @@ public class Compras {
     public static void verCarritoDetallado(int[] productos, int[] compras, int[] valores) {
         System.out.println("El carro tiene: ");
         for (int i = 0; i < productos.length; i++) {
-            System.out.println(compras[i] + " productos tipo " + (i+1) + ", costo = " + valores[i]);
+            System.out.println(compras[i] + " productos tipo " + "["+(i+1) +"]"+ ", costo = " + "["+valores[i]+"]");
         }
         System.out.println("TOTAL= " + totalCompra(valores));
     }
